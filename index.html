@@ -19,7 +19,7 @@
   }
 
   body {
-    font-family: 'Segoe UI', Arial, sans-serif;
+    font-family: "Segoe UI", Arial, sans-serif;
     background: var(--bg);
     color: var(--text);
     min-height: 100vh;
@@ -29,25 +29,9 @@
     padding: 2rem 1rem;
   }
 
-  header {
-    text-align: center;
-    margin-bottom: 2rem;
-  }
-
-  header img {
-    width: 160px;
-    height: auto;
-    margin-bottom: 0.5rem;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  header p {
-    font-size: 14px;
-    color: var(--muted);
-    letter-spacing: 0.3px;
-  }
+  header { text-align: center; margin-bottom: 2rem; }
+  header img { width: 160px; height: auto; margin-bottom: 0.5rem; display: block; margin-left: auto; margin-right: auto; }
+  header p { font-size: 14px; color: var(--muted); letter-spacing: 0.3px; }
 
   .card {
     background: var(--card);
@@ -58,174 +42,113 @@
     max-width: 440px;
     margin-bottom: 1.5rem;
   }
-
-  .card h2 {
-    font-size: 15px;
-    font-weight: 600;
-    color: var(--text);
-    margin-bottom: 1.25rem;
-  }
+  .card h2 { font-size: 15px; font-weight: 600; color: var(--text); margin-bottom: 1.25rem; }
 
   .field { margin-bottom: 1.1rem; }
-
-  .field label {
-    display: block;
-    font-size: 13px;
-    color: var(--muted);
-    margin-bottom: 6px;
-    font-weight: 500;
-  }
-
+  .field label { display: block; font-size: 13px; color: var(--muted); margin-bottom: 6px; font-weight: 500; }
   .field input {
-    width: 100%;
-    padding: 10px 14px;
-    border: 1px solid var(--border);
-    border-radius: 8px;
-    font-size: 15px;
-    color: var(--text);
-    background: #fafafa;
-    outline: none;
-    transition: border-color 0.2s;
+    width: 100%; padding: 10px 14px;
+    border: 1px solid var(--border); border-radius: 8px;
+    font-size: 15px; color: var(--text); background: #fafafa;
+    outline: none; transition: border-color 0.2s;
   }
-
   .field input:focus { border-color: var(--spx); background: #fff; }
 
   .btn-gerar {
-    width: 100%;
-    padding: 12px;
-    background: var(--spx);
-    color: #fff;
-    border: none;
-    border-radius: 8px;
-    font-size: 15px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: background 0.2s, transform 0.1s;
-    margin-top: 0.25rem;
+    width: 100%; padding: 12px;
+    background: var(--spx); color: #fff;
+    border: none; border-radius: 8px;
+    font-size: 15px; font-weight: 600; cursor: pointer;
+    transition: background 0.2s, transform 0.1s; margin-top: 0.25rem;
   }
-
   .btn-gerar:hover { background: var(--spx-dark); }
   .btn-gerar:active { transform: scale(0.98); }
 
   #preview-area { width: 100%; max-width: 440px; display: none; }
   #preview-area.visible { display: block; }
 
+  /* ── ETIQUETA ── */
   .etiqueta-preview {
     background: #fff;
     border: 2px solid #ccc;
     border-radius: var(--radius);
-    padding: 1.75rem 2rem 1.5rem;
     text-align: center;
     margin-bottom: 1rem;
     font-family: Arial, Helvetica, sans-serif;
+
+    /* Tamanho fixo em mm para preview */
+    width: 70mm;
+    min-height: 40mm;
+    padding: 3mm 4mm 4mm;
+    margin-left: auto;
+    margin-right: auto;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
 
-  .et-logo {
-    margin-bottom: 1.4rem;
-  }
-
-  .et-logo img {
-    width: 140px;
-    height: auto;
-  }
+  .et-logo { margin-bottom: 1.5mm; }
+  .et-logo img { width: 28mm; height: auto; }
 
   .et-nome-row {
     display: flex;
     align-items: flex-end;
-    border-bottom: 2.5px solid #000;
-    padding-bottom: 5px;
-    margin-bottom: 1.4rem;
+    border-bottom: 1.5px solid #000;
+    padding-bottom: 2px;
+    margin-bottom: 2mm;
     text-align: left;
   }
+  .et-nome-label { font-size: 9px; font-weight: 700; color: #000; white-space: nowrap; margin-right: 3px; flex-shrink: 0; }
+  .et-nome-valor { font-size: 9px; font-weight: 400; color: #000; flex: 1; min-width: 0; word-break: break-word; }
 
-  .et-nome-label {
-    font-size: 22px;
-    font-weight: 700;
-    color: #000;
-    white-space: nowrap;
-    margin-right: 8px;
-    flex-shrink: 0;
-  }
-
-  .et-nome-valor {
-    font-size: 20px;
-    font-weight: 400;
-    color: #000;
-    flex: 1;
-    min-width: 0;
-    word-break: break-word;
-  }
-
-  .et-data-titulo {
-    font-size: 20px;
-    font-weight: 700;
-    color: #000;
-    margin-bottom: 0.75rem;
-    letter-spacing: 0.5px;
-  }
-
+  .et-data-titulo { font-size: 8.5px; font-weight: 700; color: #000; margin-bottom: 1.5mm; letter-spacing: 0.3px; }
   .et-data-valor {
-    font-size: 22px;
-    font-weight: 700;
-    color: #000;
-    border-bottom: 2.5px solid #000;
-    display: inline-block;
-    padding: 0 1rem 4px;
-    min-width: 200px;
+    font-size: 10px; font-weight: 700; color: #000;
+    border-bottom: 1.5px solid #000;
+    display: inline-block; padding: 0 4px 2px;
+    min-width: 36mm;
   }
 
+  /* ── BOTÕES ── */
   .btn-imprimir {
-    width: 100%;
-    padding: 11px;
-    background: transparent;
-    color: var(--text);
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    font-size: 15px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-    margin-bottom: 0.6rem;
-    transition: background 0.2s;
+    width: 100%; padding: 11px;
+    background: transparent; color: var(--text);
+    border: 1px solid #ccc; border-radius: 8px;
+    font-size: 15px; cursor: pointer;
+    display: flex; align-items: center; justify-content: center; gap: 8px;
+    margin-bottom: 0.6rem; transition: background 0.2s;
   }
-
   .btn-imprimir:hover { background: #f0f0f0; }
 
   .btn-nova {
-    width: 100%;
-    padding: 11px;
-    background: transparent;
-    color: var(--spx);
-    border: 1px solid var(--spx);
-    border-radius: 8px;
-    font-size: 15px;
-    cursor: pointer;
-    font-weight: 600;
-    transition: background 0.2s;
-    margin-bottom: 0.3rem;
+    width: 100%; padding: 11px;
+    background: transparent; color: var(--spx);
+    border: 1px solid var(--spx); border-radius: 8px;
+    font-size: 15px; cursor: pointer; font-weight: 600;
+    transition: background 0.2s; margin-bottom: 0.3rem;
   }
-
   .btn-nova:hover { background: #fff0eb; }
 
-  .aviso {
-    font-size: 12px;
-    color: var(--muted);
-    text-align: center;
-    margin-top: 0.5rem;
-  }
+  .aviso { font-size: 12px; color: var(--muted); text-align: center; margin-top: 0.5rem; }
 
+  /* ── IMPRESSÃO ── */
   @media print {
     body { background: white; padding: 0; margin: 0; }
     header, .card, .btn-imprimir, .btn-nova, .aviso { display: none !important; }
-    #preview-area { display: block !important; max-width: 100%; }
+    #preview-area { display: block !important; }
+
+    @page { size: 70mm 40mm; margin: 0; }
+
     .etiqueta-preview {
-      border: 1.5px solid #999;
+      width: 70mm;
+      height: 40mm;
+      min-height: unset;
+      border: none;
       border-radius: 0;
+      padding: 3mm 4mm;
+      margin: 0;
       page-break-inside: avoid;
-      padding: 2cm;
-      width: 100%;
     }
   }
 </style>
